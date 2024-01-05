@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Nombres de Personas</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilosNombres.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/nombres" method="POST">
+            <label for="nombre1">Nombre 1:</label>
+            <input type="text" id="nombre1" name="nombre1" required>
+            <br>
+            <label for="nombre2">Nombre 2:</label>
+            <input type="text" id="nombre2" name="nombre2" required>
+            <br>
+            <label for="nombre3">Nombre 3:</label>
+            <input type="text" id="nombre3" name="nombre3" required>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if mensaje %}
+        <div class="resultado">
+            <p> {{ mensaje }}</p>
+            {% if mensaje2 %}
+                 <p> {{ mensaje2 }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
